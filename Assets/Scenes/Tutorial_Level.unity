@@ -466,7 +466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267453953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.95, y: 1.24, z: 5}
+  m_LocalPosition: {x: 1.95, y: 1.25, z: -0.21}
   m_LocalScale: {x: 2.6087, y: 2.6087, z: 2.6087}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -598,6 +598,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1414754989}
+  terminal: {fileID: 323740137}
+  player: {fileID: 2023861527}
+  Using: 0
 --- !u!1 &356092768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,8 +2603,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414754987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.89, y: 0.93, z: -5}
-  m_LocalScale: {x: 2.546791, y: 4.1599174, z: 1.0502231}
+  m_LocalPosition: {x: 1.89, y: 0.96, z: 0.15}
+  m_LocalScale: {x: 2.546791, y: 5.0958986, z: 1.0502231}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3060,6 +3063,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1414754989}
+  terminal: {fileID: 0}
+  player: {fileID: 0}
+  Using: 0
 --- !u!4 &1996588641
 Transform:
   m_ObjectHideFlags: 0
@@ -3169,7 +3175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023861521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.15, y: 0.914, z: 0}
+  m_LocalPosition: {x: -1.68, y: 0.914, z: 0}
   m_LocalScale: {x: 2.15, y: 2.514375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
