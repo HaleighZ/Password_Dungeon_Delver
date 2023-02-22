@@ -26,37 +26,37 @@ public class triggerDoor : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        if (Input.GetKeyDown("f")){
-            if (doorTrigger){
-                door.enabled = false;
-            }
-            else{
-                door.enabled = true;
-            }
-            doorTrigger = !doorTrigger;
-        }
+        // if (Input.GetKeyDown("f")){
+        //     if (doorTrigger){
+        //         door.enabled = false;
+        //     }
+        //     else{
+        //         door.enabled = true;
+        //     }
+        //     doorTrigger = !doorTrigger;
+        // }
     }
-    void OnTriggerStay2D(Collider2D col){
+    // void OnTriggerStay2D(Collider2D col){
 
-        if(col.gameObject.tag == "Player"){
+    //     if(col.gameObject.tag == "Player"){
 
-            if(Input.GetKey(KeyCode.F)){
-            Using = !Using;
+    //         if(Input.GetKey(KeyCode.F)){
+    //         Using = !Using;
 
-            if(Using){
-            door.enabled = false;
+    //         if(Using){
+    //         door.enabled = false;
 
-            } 
-            else{
-            door.enabled = true;
+    //         } 
+    //         else{
+    //         door.enabled = true;
 
-            }
+    //         }
 
-            }
+    //         }
 
-        }
+    //     }
 
-    }
+    // }
 }
 
         // if (Input.GetKeyDown("f")){
