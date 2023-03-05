@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Gadget_Holder : MonoBehaviour
 {
-    private List<Terminal_Key.KeyType> keyList; 
+    private List<Terminal_Key.KeyType> keyList;
+    public TextMeshProUGUI pressesF, continues;    //The text box used to access key.
     private void Awake() {
         keyList = new List<Terminal_Key.KeyType>();
+        pressesF = GetComponentInChildren<objectiveScreen>().pressF;  //Grabs component that has the objectiveScreen script with the variable pressF
+        continues = GetComponentInChildren<objectiveScreen>().continuing;
     }
     public void addKey(Terminal_Key.KeyType keyType){
         Debug.Log("Added key!");
+        pressesF.enabled = false; //When the gadget console is accessed, turns off the text box. Then enables the continues textbox
+        continues.enabled = true; 
         keyList.Add(keyType);
     }
     public bool ContainsKey(Terminal_Key.KeyType keyType){
