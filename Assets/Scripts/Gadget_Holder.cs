@@ -37,15 +37,30 @@ public class Gadget_Holder : MonoBehaviour
 
         Level_Transition level_trans = collider.GetComponent<Level_Transition>();
         if (level_trans != null){
+            
+            SaveManager saveMan = collider.GetComponent<SaveManager>();
+            if (saveMan != null){
             if(level_trans.GetLevelType() == Level_Type.LevelType.Level_1){
                 level_trans.ChangeScene("Level_1");
-            }
+                saveMan.updateLevel("Level_1");
+                saveMan.SaveData();
+                Debug.Log(saveMan.data.levelName);
+                }
             if(level_trans.GetLevelType() == Level_Type.LevelType.Level_2){
                 level_trans.ChangeScene("Level_2");
-            }
+                saveMan.updateLevel("Level_2");
+                saveMan.SaveData();
+                Debug.Log(saveMan.data.levelName);
+                }
             if(level_trans.GetLevelType() == Level_Type.LevelType.Level_3){
                 level_trans.ChangeScene("Level_3");
+                saveMan.updateLevel("Level_3");
+                saveMan.SaveData();
+                Debug.Log(saveMan.data.levelName);
+                }
             }
         }
+        
     }
+
 }
