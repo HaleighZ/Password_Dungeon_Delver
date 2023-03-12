@@ -8,8 +8,8 @@ public class Gadget_Holder : MonoBehaviour
     public TextMeshProUGUI pressesF, continues;    //The text box used to access key.
     private void Awake() {
         keyList = new List<Terminal_Key.KeyType>(); //Instantiates a new keyList to add keys onto
-        pressesF = GetComponentInChildren<objectiveScreen>().pressF;  //Grabs component that has the objectiveScreen script with the variable pressF
-        continues = GetComponentInChildren<objectiveScreen>().continuing;
+         //Grabs component that has the objectiveScreen script with the variable pressF
+        
     }
 
     //Adds the specific key to the Player's keyList
