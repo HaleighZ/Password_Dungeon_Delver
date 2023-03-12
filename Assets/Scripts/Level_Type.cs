@@ -11,6 +11,7 @@ public class Level_Type : MonoBehaviour
         Level_3
     }
 
+    //Returns LevelType
     public LevelType GetLevelType(){
         return levelType;
     }   

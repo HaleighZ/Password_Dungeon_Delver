@@ -14,7 +14,7 @@ public class triggerDoor : MonoBehaviour
 
     public bool Using;
 
-    
+    //THIS IS GOING TO BE REPURPOSED/REMOVED SOON
 
     // Start is called before the first frame update
     void Start()

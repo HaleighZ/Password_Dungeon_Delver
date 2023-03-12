@@ -11,6 +11,7 @@ public class Terminal_Key : MonoBehaviour
         RainbowTable
     }
 
+    //Returns KeyType (Brute, Dictionary, Rainbow)
     public KeyType GetKeyType(){
         return keyType;
     }

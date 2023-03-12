@@ -17,6 +17,8 @@ public class SaveManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //TEST FUNCTIONS BELOW. WILL REMOVE THIS LATER.
+        
         // if(Input.GetKeyDown("g")){
         //     SaveData();
         // }
@@ -28,6 +30,9 @@ public class SaveManager : MonoBehaviour
         // }
     }
 
+    //Saves the name of the level into a JSON file that is rooted somewhere within the AppData folder
+    //Tried changing the location to within the Assets folder upon first creation with bad results.
+    //May revisit later.
     public void SaveData(){
         string destinationFolder = Application.persistentDataPath+"/Test.json";
 
@@ -41,7 +46,8 @@ public class SaveManager : MonoBehaviour
         fileThing.Close();
     }
 
-        public void LoadData(){
+    //Reads the data from the JSON file (Level name) and makes it usable for other functions
+    public void LoadData(){
         string destinationFolder = Application.persistentDataPath+"/Test.json";
 
         if(!File.Exists(destinationFolder)){
@@ -59,6 +65,7 @@ public class SaveManager : MonoBehaviour
         
     }
 
+    //Updates the name of the level stored within the ScriptableObject and JSON file
     public void updateLevel(string levelName){
         this.data.levelName = levelName;
     }
