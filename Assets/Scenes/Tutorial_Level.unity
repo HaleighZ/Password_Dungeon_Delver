@@ -4152,6 +4152,14 @@ PrefabInstance:
       propertyPath: canvasText
       value: 
       objectReference: {fileID: 1102952051}
+    - target: {fileID: 6114776698431053911, guid: f4b1ef0b5aa6e7747818d97e4392602d, type: 3}
+      propertyPath: pressSpace
+      value: 
+      objectReference: {fileID: 1270224205}
+    - target: {fileID: 8050989241583636967, guid: f4b1ef0b5aa6e7747818d97e4392602d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: fa082cc5e296b344a98dec5289b60d2c, type: 2}
     - target: {fileID: 8050989241583636967, guid: f4b1ef0b5aa6e7747818d97e4392602d, type: 3}
       propertyPath: m_Constraints
       value: 0

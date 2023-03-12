@@ -15,8 +15,10 @@ public class Gadget_Holder : MonoBehaviour
     //Adds the specific key to the Player's keyList
     public void addKey(Terminal_Key.KeyType keyType){
         Debug.Log("Added key!");
+        if (pressesF.enabled == true){
         pressesF.enabled = false; //When the gadget console is accessed, turns off the text box. Then enables the continues textbox
         continues.enabled = true; 
+        }
         keyList.Add(keyType);
     }
     //Checks what key the terminal is holding
