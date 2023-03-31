@@ -8,4 +8,7 @@ public class QuitGame : MonoBehaviour
         Debug.Log("Exiting Game!");
         Application.Quit();
     }
+    public void doExitUI(){
+        gameObject.SetActive(false);
+    }
 }
