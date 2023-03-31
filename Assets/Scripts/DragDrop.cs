@@ -20,7 +20,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnBeginDrag(PointerEventData eventData){ 
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
-        Debug.Log("OnBeginDrag");
+        //Debug.Log("OnBeginDrag");
     }
 
     //Enables blocking of raycasts again when the user is done dragging the item,
@@ -28,7 +28,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnEndDrag(PointerEventData eventData){
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
-        Debug.Log("OnEndDrag");
+        //Debug.Log("OnEndDrag");
     }
 
     //Moves the draggable object with respect to the cursor
@@ -40,7 +40,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     //Checks if the pointer is clicked down on an object, will probably remove later
     public void OnPointerDown(PointerEventData eventData){
-        Debug.Log("OnPointerDown");
+        //Debug.Log("OnPointerDown");
     }
 
     //Removes Drag threshold to avoid issues with minimum drag distance

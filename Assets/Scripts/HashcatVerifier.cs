@@ -8,6 +8,10 @@ public class HashcatVerifier : MonoBehaviour
 {
     GameObject[] objects = {null, null, null, null};
     public GameObject[] solution;
+    
+    void Start(){
+        gameObject.SetActive(false);
+    }
 
     public void Verify(){
         bool result = true;
