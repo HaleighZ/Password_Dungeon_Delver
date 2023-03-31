@@ -72,9 +72,10 @@ public class Gadget_Holder : MonoBehaviour
             }
         }
 
+        //If they press 'F' while in the collider, they will open the UI
         OpenUI openUI = collider.GetComponent<OpenUI>();
         if (openUI != null){
-            if (Input.GetKeyDown("f")){ //If they press 'F' while in the collider, they will open the UI
+            if (Input.GetKeyDown("f")){ 
                 openUI.UI.SetActive(true);
             }
         }
