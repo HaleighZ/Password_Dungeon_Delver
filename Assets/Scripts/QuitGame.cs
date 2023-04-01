@@ -9,6 +9,7 @@ public class QuitGame : MonoBehaviour
         Application.Quit();
     }
     public void doExitUI(){
+        Time.timeScale = 1.0f;
         gameObject.SetActive(false);
     }
 }

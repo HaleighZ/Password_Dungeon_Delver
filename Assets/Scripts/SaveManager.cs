@@ -44,6 +44,7 @@ public class SaveManager : MonoBehaviour
         byte[] bytes = Encoding.UTF8.GetBytes(JsonUtility.ToJson(data));
         fileThing.Write(bytes);
         fileThing.Close();
+        Debug.Log("Saved Data");
     }
 
     //Reads the data from the JSON file (Level name) and makes it usable for other functions
