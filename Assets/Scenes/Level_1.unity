@@ -3269,9 +3269,29 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2798380463363210248, guid: ddd0dffa204569c48be9c2f5df49c6d2, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1303858672}
+    - target: {fileID: 2798380463363210248, guid: ddd0dffa204569c48be9c2f5df49c6d2, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798380463363210248, guid: ddd0dffa204569c48be9c2f5df49c6d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798380463363210248, guid: ddd0dffa204569c48be9c2f5df49c6d2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1219071633
+      objectReference: {fileID: 0}
     - target: {fileID: 9083460931203396097, guid: ddd0dffa204569c48be9c2f5df49c6d2, type: 3}
       propertyPath: m_Name
       value: BruteForceUI (Hashcat)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083460931203396097, guid: ddd0dffa204569c48be9c2f5df49c6d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd0dffa204569c48be9c2f5df49c6d2, type: 3}

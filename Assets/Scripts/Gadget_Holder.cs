@@ -7,10 +7,9 @@ public class Gadget_Holder : MonoBehaviour
     private List<Terminal_Key.KeyType> keyList;
     public TextMeshProUGUI pressesF, continues;    //The text box used to access key.
     private void Awake() {
-        Time.timeScale = 1.0f;
+        
         keyList = new List<Terminal_Key.KeyType>(); //Instantiates a new keyList to add keys onto
          //Grabs component that has the objectiveScreen script with the variable pressF
-        
     }
 
     //Adds the specific key to the Player's keyList
@@ -78,10 +77,9 @@ public class Gadget_Holder : MonoBehaviour
         if (openUI != null){
             if (Input.GetKeyDown("f")){ 
                 openUI.UI.SetActive(true);
-                Time.timeScale = 0.0f;
+                
             }
         }
-        
     }
 
 }
