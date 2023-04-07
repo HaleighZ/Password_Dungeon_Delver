@@ -6,9 +6,9 @@ public class Terminal_Key : MonoBehaviour
 {
     [SerializeField] private KeyType keyType;
     public enum KeyType{
-        Brute,
-        Dictionary,
-        RainbowTable
+        Tutorial,
+        BruteTutorial,
+        Brute
     }
 
     //Returns KeyType (Brute, Dictionary, Rainbow)

@@ -7,6 +7,9 @@ TagManager:
   - Panel
   - Reveal
   - UI
+  - Tutorial_Console
+  - Door_Terminal
+  - First_Tutorial_Console
   layers:
   - Default
   - TransparentFX

@@ -15,10 +15,6 @@ public class Gadget_Holder : MonoBehaviour
     //Adds the specific key to the Player's keyList
     public void addKey(Terminal_Key.KeyType keyType){
         Debug.Log("Added key!");
-        if (pressesF.enabled == true){
-        pressesF.enabled = false; //When the gadget console is accessed, turns off the text box. Then enables the continues textbox
-        continues.enabled = true; 
-        }
         keyList.Add(keyType);
     }
     //Checks what key the terminal is holding
@@ -31,8 +27,15 @@ public class Gadget_Holder : MonoBehaviour
         //If the Player collider is colliding with the one of a Terminal_Key script holder
         Terminal_Key term_key = collider.GetComponent<Terminal_Key>();
         if(term_key != null){
-            if (Input.GetKeyDown("f")){ //If they press 'F' while in the collider, they will add a key to themself
-                addKey(term_key.GetKeyType());
+            if(term_key.tag == "First_Tutorial_Console"){
+                //If they press 'F' while in the collider, they will add a key to themself
+                if (Input.GetKeyDown("f")){ 
+                    addKey(Terminal_Key.KeyType.Tutorial);
+                    if (pressesF.enabled == true){
+                        pressesF.enabled = false; //When the gadget console is accessed, turns off the text box. Then enables the continues textbox
+                        continues.enabled = true; 
+                    }
+                }
             }
         }
 
@@ -76,8 +79,7 @@ public class Gadget_Holder : MonoBehaviour
         OpenUI openUI = collider.GetComponent<OpenUI>();
         if (openUI != null){
             if (Input.GetKeyDown("f")){ 
-                openUI.UI.SetActive(true);
-                
+                openUI.UI.SetActive(true);  
             }
         }
     }
