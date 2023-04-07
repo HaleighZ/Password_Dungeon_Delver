@@ -6,10 +6,17 @@ public class Gadget_Holder : MonoBehaviour
 {
     private List<Terminal_Key.KeyType> keyList;
     public TextMeshProUGUI pressesF, continues;    //The text box used to access key.
+    private bool pressingMenuKey = false;
+    
     private void Awake() {
         
         keyList = new List<Terminal_Key.KeyType>(); //Instantiates a new keyList to add keys onto
          //Grabs component that has the objectiveScreen script with the variable pressF
+    }
+
+    void Update(){
+        if (Input.GetKeyDown("f")) { pressingMenuKey = true; }
+        if(Input.GetKeyUp("f")) { pressingMenuKey=false; }
     }
 
     //Adds the specific key to the Player's keyList
@@ -29,7 +36,7 @@ public class Gadget_Holder : MonoBehaviour
         if(term_key != null){
             if(term_key.tag == "First_Tutorial_Console"){
                 //If they press 'F' while in the collider, they will add a key to themself
-                if (Input.GetKeyDown("f")){ 
+                if (pressingMenuKey){ 
                     addKey(Terminal_Key.KeyType.Tutorial);
                     if (pressesF.enabled == true){
                         pressesF.enabled = false; //When the gadget console is accessed, turns off the text box. Then enables the continues textbox
@@ -78,7 +85,7 @@ public class Gadget_Holder : MonoBehaviour
         //If they press 'F' while in the collider, they will open the UI
         OpenUI openUI = collider.GetComponent<OpenUI>();
         if (openUI != null){
-            if (Input.GetKeyDown("f")){ 
+            if (pressingMenuKey){ 
                 openUI.UI.SetActive(true);  
             }
         }
