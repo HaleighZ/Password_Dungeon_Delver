@@ -17,7 +17,6 @@ public class PauseMenu : MonoBehaviour
     private void Update() {
         if(Input.GetKeyDown("p")){
             panel.SetActive(true);
-            Time.timeScale = 0.0f;
         }
     }
     public void Pause()
@@ -28,7 +27,6 @@ public class PauseMenu : MonoBehaviour
         }else
         {
             panel.SetActive(false);
-            Time.timeScale = 1.0f;
         }
     }
     public void Reveal(){
