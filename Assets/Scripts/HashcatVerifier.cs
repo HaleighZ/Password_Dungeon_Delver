@@ -17,6 +17,11 @@ public class HashcatVerifier : MonoBehaviour
     void Start(){
         gameObject.SetActive(false);
     }
+    private void Update() {
+        if (gameObject.activeInHierarchy == true){
+            FindObjectOfType<Gadget_Holder>().TimeScale = 0.0f;
+        }    
+    }
     void Awake(){
         gadget_Holder = gadget_Holder.GetComponent<Gadget_Holder>();
         terminal = terminal.GetComponent<Terminal_Key>();

@@ -6,7 +6,7 @@ public class OpenUI : MonoBehaviour
 {
     public GameObject UI;
 
-    void openTheUI(){
+    public void openTheUI(){
         UI.SetActive(true);
     }
 }

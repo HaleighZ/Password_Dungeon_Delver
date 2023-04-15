@@ -7,9 +7,10 @@ public class Gadget_Holder : MonoBehaviour
     private List<Terminal_Key.KeyType> keyList;
     public TextMeshProUGUI pressesF, continues;    //The text box used to access key.
     private bool pressingMenuKey = false;
-    
+
+    public float TimeScale = 1.0f;
     private void Awake() {
-        
+       
         keyList = new List<Terminal_Key.KeyType>(); //Instantiates a new keyList to add keys onto
          //Grabs component that has the objectiveScreen script with the variable pressF
     }
@@ -17,6 +18,7 @@ public class Gadget_Holder : MonoBehaviour
     void Update(){
         if (Input.GetKeyDown("f")) { pressingMenuKey = true; }
         if(Input.GetKeyUp("f")) { pressingMenuKey=false; }
+        Time.timeScale = TimeScale;
     }
 
     //Adds the specific key to the Player's keyList
@@ -56,6 +58,7 @@ public class Gadget_Holder : MonoBehaviour
 
         //If the Player collider is colliding with one of a Level_Transition script holder,
         //It will grab the SaveManager and then check what the level type is before updating and writing to file 
+        
         Level_Transition level_trans = collider.GetComponent<Level_Transition>();
         if (level_trans != null){
             
@@ -86,9 +89,12 @@ public class Gadget_Holder : MonoBehaviour
         OpenUI openUI = collider.GetComponent<OpenUI>();
         if (openUI != null){
             if (pressingMenuKey){ 
-                openUI.UI.SetActive(true);  
+                openUI.UI.SetActive(true); 
+                
             }
         }
-    }
 
+    }
+    
 }
+

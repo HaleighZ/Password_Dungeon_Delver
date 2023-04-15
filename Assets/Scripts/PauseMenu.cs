@@ -6,7 +6,6 @@ public class PauseMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     private GameObject panel; 
-    private GameObject reveal;
     
     void Start()
     {
@@ -17,24 +16,18 @@ public class PauseMenu : MonoBehaviour
     private void Update() {
         if(Input.GetKeyDown("p")){
             panel.SetActive(true);
+            FindObjectOfType<Gadget_Holder>().TimeScale = 0.0f;
         }
     }
     public void Pause()
     {
-        Debug.Log("Printing");
         if (panel.activeInHierarchy == false){
             panel.SetActive(true);
+            
         }else
         {
             panel.SetActive(false);
-        }
-    }
-    public void Reveal(){
-        if (reveal.activeInHierarchy == false){
-            reveal.SetActive(true);
-        }else
-        {
-            reveal.SetActive(false);
+            FindObjectOfType<Gadget_Holder>().TimeScale = 1.0f;
         }
     }
 }
