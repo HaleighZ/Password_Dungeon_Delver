@@ -76,11 +76,10 @@ public class Gadget_Holder : MonoBehaviour
                 saveMan.SaveData();
                 Debug.Log(saveMan.data.levelName);
                 }
-            if(level_trans.GetLevelType() == Level_Type.LevelType.Level_3){
-                level_trans.ChangeScene("Level_3");
-                saveMan.updateLevel("Level_3");
+            if(level_trans.GetLevelType() == Level_Type.LevelType.TitleScreen){
+                level_trans.ChangeScene("TitleScreen");
+                saveMan.updateLevel("Level_1");
                 saveMan.SaveData();
-                Debug.Log(saveMan.data.levelName);
                 }
             }
         }

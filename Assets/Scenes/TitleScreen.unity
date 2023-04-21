@@ -280,7 +280,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.192146
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -722,9 +722,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1970869645}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: ChangeScene
+      - m_Target: {fileID: 1970869649}
+        m_TargetAssemblyTypeName: Level_Transition, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3397,9 +3397,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1970869646}
-  - component: {fileID: 1970869645}
   - component: {fileID: 1970869647}
   - component: {fileID: 1970869648}
+  - component: {fileID: 1970869649}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -3407,19 +3407,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1970869645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970869644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efabf211f6ea75b4eaa4270be256c0bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Tutorial_Level
 --- !u!4 &1970869646
 Transform:
   m_ObjectHideFlags: 0
@@ -3460,6 +3447,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 7bfa6df568498114e8cb5d76603df11d, type: 2}
+--- !u!114 &1970869649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970869644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1676f06b577ca9c4cb969ead427502d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelType: 3
 --- !u!1 &2000440942
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,7 +3472,6 @@ GameObject:
   - component: {fileID: 2000440946}
   - component: {fileID: 2000440945}
   - component: {fileID: 2000440944}
-  - component: {fileID: 2000440947}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -3545,16 +3544,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2000440947}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+      - m_Target: {fileID: 1970869649}
+        m_TargetAssemblyTypeName: Level_Transition, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Tutorial_Level
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2000440945
@@ -3595,16 +3594,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000440942}
   m_CullTransparentMesh: 1
---- !u!114 &2000440947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000440942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efabf211f6ea75b4eaa4270be256c0bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Tutorial_Level

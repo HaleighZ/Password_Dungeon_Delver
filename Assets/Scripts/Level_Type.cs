@@ -8,7 +8,8 @@ public class Level_Type : MonoBehaviour
     public enum LevelType{
         Level_1,
         Level_2,
-        Level_3
+        TitleScreen,
+        Tutorial_Level
     }
 
     //Returns LevelType

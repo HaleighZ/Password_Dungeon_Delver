@@ -12,20 +12,24 @@ void Start(){
     saveMan = GetComponent<SaveManager>();
 }
 
-//Returns level type (1,2,3)
+//Returns level type (1,2,TitleScreen)
 public Level_Type.LevelType GetLevelType() {
         return levelType;
     }
     
 //Uses SceneManager to load new scene
 public void ChangeScene(string level){
-    SceneManager.LoadScene(level);
-    
+    SceneManager.LoadScene(level); 
     }
+
+//Uses the data in the JSON file to load the scene corresponding to that string. DO NOT REMOVE FROM SCENE MANAGER IN TITLE MENU
 public void LoadScene(){
     SceneManager.LoadScene(saveMan.data.levelName);
-}
+    }
 
+public void SwapScene(){
+    SceneManager.LoadScene(levelType.ToString()); 
+    }
 
 }
 

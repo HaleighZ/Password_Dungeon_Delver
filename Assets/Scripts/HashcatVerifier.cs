@@ -10,8 +10,10 @@ public class HashcatVerifier : MonoBehaviour
     GameObject[] objects = {null, null, null, null};
     //The array of the solution determined by the objects dragged into the component's GUI
     public GameObject[] solution;
-    [SerializeField] Gadget_Holder gadget_Holder;
-    [SerializeField] Terminal_Key terminal;
+    [SerializeField] Gadget_Holder gadget_Holder; //Grabs the player's Gadget_Holder Script
+    [SerializeField] Terminal_Key terminal; //Grabs the Terminal_Key script from the specific terminal
+    [SerializeField] GameObject desc; //Grabs the current description of the UI
+    [SerializeField] GameObject victory; //Grabs the victory message of the UI
 
     //This UI will start hidden by default
     void Start(){
@@ -28,7 +30,7 @@ public class HashcatVerifier : MonoBehaviour
     }
 
     //This will iterate through the entire solution array of objects against the player's arrangement to see if it is correct
-    //If it is correct, it will print a log. If not, it will currently do nothing.
+    //If it is correct, it will disable the default message and set the victory message to active while giving the player the corresponding key
     public void Verify(){
         bool result = true;
         for (int i = 0; i < objects.Length; i++){
@@ -37,20 +39,19 @@ public class HashcatVerifier : MonoBehaviour
             }
         }
         if(result == true){
-            Debug.Log("You got it!");
+
             if(terminal.tag == "Tutorial_Console"){
-                if(gadget_Holder == null){
-                    Debug.Log("gadgetholder is null");
-                }
-                if(terminal == null){
-                    Debug.Log("terminal is null");
-                }
                 gadget_Holder.addKey(terminal.GetKeyType());
                 Debug.Log("You have received the BruteTutorial Key");
+                desc.SetActive(false);
+                victory.SetActive(true);
             }
+            
             if(terminal.tag == "Door_Terminal"){
                 gadget_Holder.addKey(terminal.GetKeyType());
                 Debug.Log("You have received the Brute Key");
+                desc.SetActive(false);
+                victory.SetActive(true);
             }
         }
     }

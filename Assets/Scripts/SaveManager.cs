@@ -8,12 +8,6 @@ public class SaveManager : MonoBehaviour
 {
     public DataHolder data;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -45,6 +39,7 @@ public class SaveManager : MonoBehaviour
         fileThing.Write(bytes);
         fileThing.Close();
         Debug.Log("Saved Data");
+        Debug.Log(destinationFolder);
     }
 
     //Reads the data from the JSON file (Level name) and makes it usable for other functions
@@ -61,8 +56,8 @@ public class SaveManager : MonoBehaviour
         fileThing.Read(bytes);
         fileThing.Close();
 
-        DataHolder dataloader = new DataHolder();
-        JsonUtility.FromJsonOverwrite(Encoding.UTF8.GetString(bytes), dataloader);
+        //DataHolder dataloader = DataHolder.CreateInstance(ScriptableObject data);
+        JsonUtility.FromJsonOverwrite(Encoding.UTF8.GetString(bytes), data);
         
     }
 
